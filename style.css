@@ -99,6 +99,7 @@ p {
   display: inline-block;
   vertical-align: bottom;
   text-align: center;
+  margin: 50px;
 }
 
 .two-columns .row {
@@ -193,6 +194,9 @@ footer {
 @media screen and (max-width: 600px) {
   .hero-text {
     margin: 20px;
+  }
+  .two-columns .column {
+    margin: 0;
   }
   .column {
     width: 100%;
