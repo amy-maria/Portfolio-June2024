@@ -71,7 +71,7 @@ p {
   width: 45px;
 }
 .hero-text {
-  margin: 20px;
+  margin: 40px 120px;
   text-align: center;
 
   line-height: 38px;
@@ -191,6 +191,9 @@ footer {
 }
 /*responsive layout*/
 @media screen and (max-width: 600px) {
+  .hero-text {
+    margin: 20px;
+  }
   .column {
     width: 100%;
   }
