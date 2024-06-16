@@ -1,0 +1,219 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+.img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background: linear-gradient(
+    178.1deg,
+    rgb(60, 55, 106) 8.5%,
+    rgb(23, 20, 69) 82.4%
+  );
+  color: #fafafa;
+  margin: 30px;
+}
+ul {
+  text-decoration: none;
+  text-decoration-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+/*nav {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 0;
+} */
+
+nav li {
+  display: inline;
+  float: right;
+  font-size: 16xpx;
+}
+a {
+  text-decoration: none;
+  color: #fafafa;
+  padding: 20px;
+}
+nav {
+  padding-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  text-align: center;
+}
+.logo {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+}
+.avatar {
+  border-radius: 50%;
+  width: 30px;
+}
+.hero-text {
+  margin: 20px;
+  text-align: center;
+
+  line-height: 38px;
+}
+.hero-text h1 {
+  font-size: 35px;
+  padding: 10px;
+}
+.hero-text h2 {
+  font-size: 30px;
+  padding: 15px;
+}
+.hero-text p {
+  margin: 0 30px;
+  font-size: 18px;
+  text-align: left;
+}
+.two-columns {
+  text-align: center;
+}
+/*equal columns float together*/
+.two-columns .column {
+  width: 100%;
+  max-width: 350px;
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.two-columns .row {
+  margin-top: 30px;
+  margin-bottom: 65px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.column .learn-btn {
+  display: inline-flex;
+  margin-top: 20px;
+  background-color: #786197;
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 5px;
+  /*position: relative;*/
+  vertical-align: bottom;
+}
+.learn-btn:hover {
+  transform: scale(1.15);
+}
+/* Clear floats after the columns 
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}*/
+.work h4 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.work p {
+  font-size: 18px;
+}
+.tech-logo {
+  align-content: center;
+  margin: 20px;
+}
+.tech-logo li {
+  padding: 30px;
+  display: inline-flex;
+}
+.certifications h5 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.certifications .column {
+  width: 100%;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.certifications .row {
+  margin-top: 30px;
+}
+.contact {
+  text-align: center;
+  margin: 30px;
+}
+.contact-btn {
+  background-color: #fafafa;
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+.contact-btn:hover {
+  background-color: #786197;
+  color: #fafafa;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.contact-logo {
+  align-content: center;
+  padding: 30px;
+}
+.contact-logo li {
+  display: inline-block;
+  padding: 10px;
+}
+/*responsive layout*/
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  h1 h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .certifications img {
+    padding: 10px;
+  }
+  .tech-logo .fa-github {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 424px) {
+  .tech-logo .fa-github {
+    visibility: hidden;
+  }
+
+  .contact-logo li {
+    visibility: hidden;
+  }
+}
