@@ -71,14 +71,14 @@ p {
   width: 45px;
 }
 .hero-text {
-  margin: 40px 120px;
+  margin: 40px 80px;
   text-align: center;
 
   line-height: 38px;
 }
 .hero-text h1 {
   font-size: 35px;
-  padding: 10px;
+  padding: 20px;
 }
 .hero-text h2 {
   font-size: 30px;
@@ -193,7 +193,9 @@ footer {
 /*responsive layout*/
 @media screen and (max-width: 600px) {
   .hero-text {
-    margin: 20px;
+    display: inline-block;
+    justify-content: start;
+    margin: 20px 10px;
   }
   .two-columns .column {
     margin: 0;
