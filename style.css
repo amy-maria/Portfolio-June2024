@@ -42,7 +42,7 @@ ul {
 nav li {
   display: inline;
   float: right;
-  font-size: 16xpx;
+  font-size: 1rem;
 }
 a {
   text-decoration: none;
@@ -77,16 +77,16 @@ p {
   line-height: 38px;
 }
 .hero-text h1 {
-  font-size: 35px;
+  font-size: 2.5rem;
   padding: 20px;
 }
 .hero-text h2 {
-  font-size: 30px;
+  font-size: 2.25rem;
   padding: 15px;
 }
 .hero-text p {
   margin: 0 30px;
-  font-size: 18px;
+  font-size: 1.2rem;
   text-align: left;
 }
 .two-columns {
@@ -108,10 +108,10 @@ p {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 800;
 }
-.column .learn-btn {
+.learn-btn button {
   display: inline-flex;
   margin-top: 20px;
   background-color: #786197;
@@ -131,11 +131,11 @@ h3 {
   clear: both;
 }*/
 .work h4 {
-  font-size: 30px;
+  font-size: 2rem;
   padding-bottom: 20px;
 }
 .work p {
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 .tech-logo {
   align-content: center;
@@ -147,7 +147,7 @@ h3 {
 }
 .certifications h5 {
   text-align: center;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 .certifications .column {
@@ -166,7 +166,7 @@ h3 {
 .contact-btn {
   background-color: #fafafa;
   color: black;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   border-radius: 5px;
   align-items: center;
@@ -204,10 +204,10 @@ footer {
     width: 100%;
   }
   h1 h2 {
-    font-size: 18px;
+    font-size: 1.12rem;
   }
   p {
-    font-size: 12px;
+    font-size: 0.75rem;
     text-align: center;
   }
   .certifications img {
