@@ -138,12 +138,20 @@ h3 {
   font-size: 1.1rem;
 }
 .tech-logo {
-  align-content: center;
   margin: 20px;
+  text-align: center;
 }
+
 .tech-logo li {
-  padding: 30px;
-  display: inline-flex;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  /*justify-content: center;
+  margin-left: 70px; */
+}
+
+.certifications {
+  text-align: center;
 }
 .certifications h5 {
   text-align: center;
@@ -152,24 +160,27 @@ h3 {
 }
 .certifications .column {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   display: inline-block;
   vertical-align: bottom;
 }
 .certifications .row {
   margin-top: 30px;
-}
-.contact {
-  text-align: center;
-  margin: 30px;
+  /*margin-left: 200px;*/
 }
 .contact-btn {
+  text-align: center;
+  align-self: center;
+  margin: 60px;
+}
+.contact-btn button {
   background-color: #fafafa;
   color: black;
   font-size: 0.75rem;
   font-weight: 500;
   border-radius: 5px;
-  align-items: center;
+  text-align: center;
+  margin-top: 20px;
   text-transform: uppercase;
   padding: 10px 20px;
 }
@@ -181,21 +192,37 @@ h3 {
 footer {
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.contact-logo {
   align-content: center;
-  padding: 30px;
+  text-align: center;
+}
+.contact-logo ul {
+  align-content: center;
+  margin-left: 200px;
+  margin-bottom: 100px;
 }
 .contact-logo li {
   display: inline-block;
-  padding: 10px;
+  padding: 40px;
 }
 /*responsive layout*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
+  .nav-link a {
+    padding: 4px;
+    font-size: 0.6rem;
+    display: inline-flex;
+  }
   .hero-text {
     display: inline-block;
     justify-content: start;
     margin: 20px 10px;
+  }
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 1.5rem;
+    line-height: 20px;
+  }
+  .hero-text p {
+    font-size: 1rem;
   }
   .two-columns .column {
     margin: 0;
@@ -203,26 +230,17 @@ footer {
   .column {
     width: 100%;
   }
-  h1 h2 {
-    font-size: 1.12rem;
-  }
-  p {
-    font-size: 0.75rem;
-    text-align: center;
-  }
   .certifications img {
     padding: 10px;
   }
-  .tech-logo .fa-github {
-    visibility: hidden;
-  }
-}
-@media screen and (max-width: 424px) {
-  .tech-logo .fa-github {
-    visibility: hidden;
-  }
 
-  .contact-logo li {
+  .contact-btn button {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-logo {
     visibility: hidden;
   }
 }
