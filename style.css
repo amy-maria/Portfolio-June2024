@@ -61,6 +61,10 @@ h5,
 p {
   text-align: center;
 }
+
+h2 {
+  font-size: 1.5rem;
+}
 .logo {
   display: inline;
   float: left;
@@ -91,25 +95,54 @@ p {
 }
 .two-columns {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* To allow items to wrap to the next line if needed */
+  justify-content: center; /* To center the columns horizontally */
+  /* Remove or adjust other layout properties if necessary */
 }
 /*equal columns float together*/
 .two-columns .column {
   width: 100%;
   max-width: 350px;
-  display: inline-block;
-  vertical-align: bottom;
+ /* display: flex;*/
+  flex-direction: column;
+  align-items: stretch;
   text-align: center;
   margin: 50px;
+  border: 1px solid #ccc;
 }
 
 .two-columns .row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   margin-top: 30px;
   margin-bottom: 65px;
+  width: 100%;
+}
+
+.two-columns .row .column {
+  width: calc(50% = 120px);
+  max-width: none;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  border: 1px solid #ccc;
+
+}
+.two-columns .column >img {
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 10px;
+
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 800;
+  margin-bottom: 20px;
 }
 .learn-btn button {
   display: inline-flex;
@@ -206,6 +239,19 @@ footer {
 }
 /*responsive layout*/
 @media screen and (max-width: 767px) {
+  .two-columns {
+    flex-direction: column; /*stack columns */
+    align-items: center;
+  }
+  .two-columns .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .two-columns .column {
+    width: 100%;
+    margin: 50px 0;
+    
+  }
   .nav-link a {
     padding: 4px;
     font-size: 0.6rem;
