@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ViewTransitions} from "next-view-transitions";
 import "./globals.css";
+import Link from "next/link";
+import Navigation from "@/components/nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +31,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+        <body className="min-h-full flex flex-col">
+          <header className="w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-gray-900">
+            <Link href="/" className="text-white font-black text-xl tracking-tighter">PORTFOLIO
+            </Link>
+            <Navigation />
+          </header>
+          <div className="flex-grow">{children}</div>
+      </body>
     </html>
 </ViewTransitions>
 
