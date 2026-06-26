@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function Navigation() {
     //activate state styling
     const activeSection = "projects";

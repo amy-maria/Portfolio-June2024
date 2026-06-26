@@ -4,6 +4,7 @@ import { ViewTransitions} from "next-view-transitions";
 import "./globals.css";
 import Link from "next/link";
 import Navigation from "@/components/nav";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,11 @@ export default function RootLayout({
             <Navigation />
           </header>
           <div className="flex-grow">{children}</div>
-      </body>
+       
+        <footer>
+          <Footer  />
+          </footer>
+           </body>
     </html>
 </ViewTransitions>
 

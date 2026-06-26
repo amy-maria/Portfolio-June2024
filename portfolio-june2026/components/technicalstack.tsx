@@ -1,39 +1,40 @@
 export interface TechnicalProps {
     id: number,
-    name: string,
+    skill: string,
     
 }
 
-export const technicalStack: TechnicalProps[] [
+export const technicalStack: TechnicalProps[]= [
     {
     id: 1,
-    name: "Python",
+    skill: "Python"
     },
-    {id: 2,
-    name: "React",
-        },
+    {
+        id: 2,
+        skill: "React"
+    },
     {id: 3,
-    name: "Next.js",
+    skill: "Next.js"
         },
     {id: 4,
-    name: "Typescript",
+    skill: "Typescript"
          },
     {id: 5,
-        name: "Tailwind CSS",
+        skill: "Tailwind CSS"
     },
     {id: 6,
-        name: "Figma",
+        skill: "Figma"
     },
     {id: 7,
-        name: "Node.js",
+        skill: "Node.js"
     },
     {id: 8,
-        name: "GraphQL",
+        skill: "GraphQL"
     },
     {id: 9,
-        name: "Vercel",
+        skill: "Vercel"
     },
     {id:10,
-        name: "PostgreSQL",
+        skill: "PostgreSQL"
     }
 ]
