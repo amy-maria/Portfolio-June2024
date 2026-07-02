@@ -5,6 +5,7 @@ import "./globals.css";
 import Link from "next/link";
 import Navigation from "@/components/nav";
 import Footer from "@/components/footer";
+import Chatbot from "@/components/Chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +40,7 @@ export default function RootLayout({
             <Navigation />
           </header>
           <div className="flex-grow">{children}</div>
-       
+       <Chatbot/>
         <footer>
           <Footer  />
           </footer>
