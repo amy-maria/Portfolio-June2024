@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { projectsData } from '@/components/data';
+import LinkButton from '@/components/linkButton';
 
 interface PageProps {
   params: Promise<{ id: string }>; // App Router asynchronous params structure
 }
 
 export default async function ProjectDetailPage({ params }: PageProps) {
-  const [handleClick]
   // dynamic id
   const { id } = await params;
   // direct evaluation
@@ -45,12 +45,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       {/* Expanded Hero Showcase Container */}
 
       {/* Detail Copy Block */}
-      <div className='text-4xl font-black text-gray-900 mb-4'> 
-      <p className='text-gray-600 leading-relaxed'>
-        {project.extendedDescription}</p>
-       <p>Key Features: {project.keyFeatures}
-      </p>
-      <button onClick={handleClick}>See It</button>
+      <div className='text-4xl font-black text-gray-900 mb-4'>
+        <p className='text-gray-600 leading-relaxed'>
+          {project.extendedDescription}
+        </p>
+        <p>Key Features: {project.keyFeatures}</p>
+        <LinkButton url={project.link} />
       </div>
     </main>
   );

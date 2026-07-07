@@ -8,6 +8,7 @@ export interface ProjectProps {
   stack: string;
   image: string;
   altText: string;
+  url: string;
 }
 
 export const projectsData: ProjectProps[] = [
@@ -23,6 +24,7 @@ export const projectsData: ProjectProps[] = [
     stack: 'Python, React, Tailwind CSS',
     image: '/images/aitripplanner.png',
     altText: 'screen shot of trip planner app using Python and AI',
+    url: '',
   },
   {
     id: 2,
@@ -37,6 +39,7 @@ export const projectsData: ProjectProps[] = [
     image: '/images/globalonlinepopulation.png',
     altText:
       'screenshot of data extraction of global online population using Python',
+    url: '',
   },
   {
     id: 3,
@@ -50,6 +53,7 @@ export const projectsData: ProjectProps[] = [
     stack: 'Next.js, React, Tailwind CSS, OAuth',
     image: '/images/promptopia.png',
     altText: 'screenshot of Promptopia app using Next.js and OAuth',
+    url: 'https://share-prompts-cyan.vercel.app/',
   },
   {
     id: 4,
@@ -63,6 +67,7 @@ export const projectsData: ProjectProps[] = [
     stack: 'Python, Flask, CSS, HTML',
     image: '/images/pythonweather.png',
     altText: 'screenshot of weather app with user posts',
+    url: '',
   },
   {
     id: 5,
@@ -76,6 +81,7 @@ export const projectsData: ProjectProps[] = [
     stack: 'React, Tailwind CSS, JavaScript, Netlify',
     image: '/images/Reactweather.png',
     altText: 'screenshot of weather app using React',
+    url: 'https://helpful-figolla-5fbcfd.netlify.app/',
   },
 
   {
@@ -90,5 +96,39 @@ export const projectsData: ProjectProps[] = [
     stack: 'React, HTML5, CSS3',
     image: '/images/Movieland3.png',
     altText: 'screenshot of Netflix style movie search',
+    url: 'https://magnificent-puppy-d069a8.netlify.app/',
+  },
+  {
+    id: 7,
+    title: 'Rockets',
+    description: 'Rockets',
+    extendedDescription: 'Rockets',
+    keyFeatures: 'Rockets',
+    stack: 'React, HTML5, CSS3',
+    image: '/images/Movieland3.png',
+    altText: 'screenshot of Rockets',
+    url: 'https://harmonious-gecko-56b001.netlify.app/',
+  },
+  {
+    id: 8,
+    title: 'Email',
+    description: 'Email',
+    extendedDescription: 'Email',
+    keyFeatures: 'Email',
+    stack: 'React, HTML5, CSS3',
+    image: '/images/Movieland3.png',
+    altText: 'screenshot of Email',
+    url: 'https://resilient-rabanadas-faf91a.netlify.app/',
+  },
+  {
+    id: 9,
+    title: 'Figma',
+    description: 'Figma',
+    extendedDescription: 'Email',
+    keyFeatures: 'Email',
+    stack: 'React, HTML5, CSS3',
+    image: '/images/Movieland3.png',
+    altText: 'screenshot of Email',
+    url: 'https://fabulous-fox-de5f06.netlify.app/',
   },
 ];
