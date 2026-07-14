@@ -5,12 +5,20 @@ test.describe('Footer contact links', () => {
         await page.goto('/');
     });
 
-    test('LinkedIn link is correct and opens in a new tab', async ({ page }) => {
-        const linkedInLink = page.getByRole('link', { name: "LinkedIn", exact: true });
-        await expect(linkedInLink).toBeVisible();
-        await expect(linkedInLink).toHaveAttribute('href', 'https://www.linkedin.com/in/amymrowell/');
-        await expect(linkedInLink).toHaveAttribute('target', '_blank');
-    }):
+    test('LinkedIn link is correct and opens in a new tab', async ({
+      page,
+    }) => {
+      const linkedInLink = page.getByRole('link', {
+        name: 'LinkedIn',
+        exact: true,
+      });
+      await expect(linkedInLink).toBeVisible();
+      await expect(linkedInLink).toHaveAttribute(
+        'href',
+        'https://www.linkedin.com/in/amymrowell/',
+      );
+      await expect(linkedInLink).toHaveAttribute('target', '_blank');
+    });
 
     
     test('Twitter link is correct and opens in a new lab', async ({ page }) => {
