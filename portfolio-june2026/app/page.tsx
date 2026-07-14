@@ -6,7 +6,16 @@ import { Suspense } from 'react';
 import CTA from '@/components/cta';
 import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ crashtest?: string }>;
+}) {
+  const params = await searchParams;
+  if (params.crashtest === 'true') {
+    throw new Error('Test crash');
+  }
+
   return (
     <main className='min-h-screen bg-[0e0d0b] px-8 py-12'>
       <Suspense

@@ -1,12 +1,5 @@
 export default function Hero() {
-  {
-    /*if (
-    process.env.NODE_ENV !== 'production' &&
-    searchParams.get('crashtest') === 'true'
-  ) {
-    throw new Error('Test crash');
-  }*/
-  }
+
   return (
     <div className='text-lg text-center text-[e2e8f0] mb-8'>
       <p className='px-8'>
