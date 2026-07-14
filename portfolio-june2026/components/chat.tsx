@@ -9,10 +9,7 @@ export default function Chat() {
   {
     /*handle AI response*/
   }
-  const [completion, setCompletion] = useState('');
-  {
-    /*handle loading state*/
-  }
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +58,10 @@ export default function Chat() {
         {
           id: crypto.randomUUID(),
           role: 'assistant',
-          content: resultData.text,
+          content:
+            typeof resultData.text === 'string'
+              ? resultData.text
+              : 'Sorry, something went wrong.',
         },
       ]);
 
@@ -87,6 +87,7 @@ export default function Chat() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
+          aria-label='Open chat'
           className='w-14 h-14 bg-blue-600 text-white rounded-full shadow-xl'>
           💬
         </button>
@@ -94,14 +95,20 @@ export default function Chat() {
 
       {/* chat window */}
       {isOpen && (
-        <div className='flex flex-col w-[360px] sm:w-[400px] h-[500px] bg-slate-500 rounded-2xl shadow-2xl overflow-hidden'>
+        <div
+          role='complementary'
+          aria-label='Portfolio assisant chat'
+          className='flex flex-col w-90 sm:w-100 h-125 bg-slate-500 rounded-2xl shadow-2xl overflow-hidden'>
           {/* header */}
           <div className='flex items-center justify-between p-4 bg-slate-600 text-white'>
             <div className='text-sm font-semibold'>
               Ask about Amy’s background
             </div>
 
-            <button onClick={() => setIsOpen(false)} className='text-white'>
+            <button
+              onClick={() => setIsOpen(false)}
+              aria-label='Close chat'
+              className='text-white'>
               ✕
             </button>
           </div>
@@ -109,7 +116,7 @@ export default function Chat() {
           {/* messages */}
           <div className='flex-1 p-4 overflow-y-auto space-y-3'>
             {messages.length === 0 && (
-              <div className='text-center text-sm text-white opacity-70 mt-10'>
+              <div className='text-center text-sm text-white mt-10'>
                 Ask me anything about Amy Rowell’s experience or skills.
               </div>
             )}
@@ -147,24 +154,11 @@ export default function Chat() {
             )}
           </div>
 
-          {/* If you want to display the single completion state right now: */}
-          {completion && (
-            <div className='flex justify-start'>
-              <div className='px-3 py-2 rounded-xl text-sm max-w-[80%] bg-white text-black'>
-                {completion}
-              </div>
-            </div>
-          )}
-
-          {error && (
-            <div className='text-xs text-red-400 text-center'>{error}</div>
-          )}
-
           <form
             onSubmit={complete}
             className='p-3 border-t flex gap-2 bg-slate-700'>
             <input
-              className='flex-1 p-2 rounded text-sm'
+              className='flex-1 p-2 rounded text-sm bg-white text-black'
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               placeholder='Ask a question...'

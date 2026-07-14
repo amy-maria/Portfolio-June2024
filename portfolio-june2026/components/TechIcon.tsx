@@ -7,6 +7,7 @@ import {
   FaGithub,
   FaTwitter,
   FaLinkedin,
+  FaEnvelope,
 } from 'react-icons/fa';
 import {
   SiNextdotjs,
@@ -31,6 +32,7 @@ const iconMap: Record<string, IconType> = {
   FaGithub,
   FaTwitter,
   FaLinkedin,
+  FaEnvelope,
 };
 
 export function TechIcon({ name }: { name: string }) {

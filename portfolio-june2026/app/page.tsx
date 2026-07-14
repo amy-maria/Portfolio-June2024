@@ -3,11 +3,12 @@ import CertificateCard from '@/components/certificatecard';
 import About from '@/components/about';
 import Hero from '@/components/hero';
 import { Suspense } from 'react';
+import CTA from '@/components/cta';
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 
 export default function Home() {
   return (
-    <main className='min-h-screen bg-[0e0d0b] py-12'>
-      {/* Wrapping everything ensures any client-side hook errors are caught gracefully */}
+    <main className='min-h-screen bg-[0e0d0b] px-8 py-12'>
       <Suspense
         fallback={
           <div className='text-center text-white py-20'>
@@ -15,30 +16,23 @@ export default function Home() {
           </div>
         }>
         <Hero />
-
-        <ProjectCard />
-
-        <h2 className='text-3xl font-black text-center text-[e2e8f0] mb-8'></h2>
-        <h2 className='text-3xl font-black text-center text-[e2e8f0] mb-8'>
-          CERTIFICATES
-        </h2>
-        <CertificateCard />
-        <h2 className='text-3xl font-black text-center text-[e2e8f0] mb-8'></h2>
-
-        <About />
-
-        <h4 className='text-3xl font-black text-center text-[e2e8f0] mb-8'></h4>
-        <h3 className='text-3xl font-black text-center text-[e2e8f0] mb-8'>
-          <p>
-            We should build something together. I am looking for a front-end or
-            full-stack role where I can grow with a team — ideally one that
-            values accessible, user-centered design. Have a project or an
-            opening in mind? I would love to talk.
-          </p>
-          <button>Contact Me</button>
-        </h3>
+        <section id='projects' className='scroll-mt-24'>
+          <h1 className='text-2xl text-center text-white'>
+            Completed Projects
+          </h1>
+          <ProjectCard />
+        </section>
+        <section id='education' className='scroll-mt-24'>
+          <hr />
+          <h2 className='mt-4 text-2xl text-center text-white'>Education</h2>
+          <CertificateCard />
+        </section>
+        <section id='about' className='scroll-mt-30'>
+          <h3 className='text-center text-2xl text-blue-600'>About Me</h3>
+          <About />
+        </section>
+        <CTA />
       </Suspense>
-      <footer></footer>
     </main>
   );
 }

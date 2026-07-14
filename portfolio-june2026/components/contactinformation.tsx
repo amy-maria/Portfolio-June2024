@@ -13,11 +13,16 @@ export const contactInformation: ContactProps[] = [
   {
     title: 'GitHub',
     href: 'https://github.com/amy-maria?tab=repositories',
-    iconName: 'FaGitHub',
+    iconName: 'FaGithub',
   },
   {
-    title: 'x',
+    title: 'Twitter/X',
     href: 'https://x.com/amymrowell',
     iconName: 'FaTwitter',
+  },
+  {
+    title: 'Email',
+    href: 'mailto:amymrowell@gmail.com',
+    iconName: 'FaEnvelope',
   },
 ];

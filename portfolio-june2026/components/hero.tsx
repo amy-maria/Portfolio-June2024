@@ -1,11 +1,20 @@
 export default function Hero() {
+  {
+    /*if (
+    process.env.NODE_ENV !== 'production' &&
+    searchParams.get('crashtest') === 'true'
+  ) {
+    throw new Error('Test crash');
+  }*/
+  }
   return (
-    <div className='text-3xl font-black text-center text-[e2e8f0] mb-8'>
-      <p>
-        I build accessible, responsive web apps — and I bring a healthcare
-        background that means I actually understand the users and workflows
-        behind the software I build. Comfortable across React, Next.js, and
-        WordPress, from Figma handoff to deployed product.
+    <div className='text-lg text-center text-[e2e8f0] mb-8'>
+      <p className='px-8'>
+        I build accessible and responsive web applications with React, Next.js,
+        and Python — end to end, from Figma to deployment. My background in
+        healthcare means that I do not just implement designs; I understand the
+        real workflows and pressures behind them. I design software that
+        respects how people actually work.
       </p>
     </div>
   );

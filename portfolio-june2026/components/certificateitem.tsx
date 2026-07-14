@@ -14,7 +14,7 @@ export function CertificateCardItem({
   altText,
 }: CertificateProps) {
   return (
-    <div className='w-full rounded-xl overflow-hidden shadow-lg bg-white relative group border border-gray-100 '>
+    <div className='w-100% rounded-xl overflow-hidden shadow-lg bg-white relative group border border-gray-100 '>
       {/* Image Container */}
       <div className='relative h-64 bg-slate-200 w-full'>
         <Image

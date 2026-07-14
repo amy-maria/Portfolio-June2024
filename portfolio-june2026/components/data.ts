@@ -24,7 +24,7 @@ export const projectsData: ProjectProps[] = [
     stack: 'Python, React, Tailwind CSS',
     image: '/images/aitripplanner.png',
     altText: 'screen shot of trip planner app using Python and AI',
-    url: '',
+    url: 'https://weathertravelai-1.streamlit.app/',
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const projectsData: ProjectProps[] = [
     image: '/images/globalonlinepopulation.png',
     altText:
       'screenshot of data extraction of global online population using Python',
-    url: '',
+    url: 'https://pyonlinepopulation.vercel.app',
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ export const projectsData: ProjectProps[] = [
     stack: 'Python, Flask, CSS, HTML',
     image: '/images/pythonweather.png',
     altText: 'screenshot of weather app with user posts',
-    url: '',
+    url: 'https://pyweatherapp-wine.vercel.app',
   },
   {
     id: 5,
@@ -98,6 +98,8 @@ export const projectsData: ProjectProps[] = [
     altText: 'screenshot of Netflix style movie search',
     url: 'https://magnificent-puppy-d069a8.netlify.app/',
   },
+];
+const inactiveProjects: ProjectProps[] = [
   {
     id: 7,
     title: 'Rockets',

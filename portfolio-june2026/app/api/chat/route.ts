@@ -6,11 +6,11 @@ const PORTFOLIO_CONTEXT = `
 
 ## CONTACT DETAILS
 - Email: amymrowell@gmail.com
-- Phone: 614.657.3589
-- LinkedIn: https://linkedin.com
+- LinkedIn: https://www.linkedin.com/in/amymrowell/
 - Portfolio: amyrowell.dev
 
 ## EXPERIENCE
+- Front-end developer beginning in 2023
 - Laboratory Manager at Coshocton Regional Medical Center (2017–2022)
 - IRL Tech III at American Red Cross
 - Laboratory Supervisor at Mt. Carmel East Hospital
@@ -19,7 +19,10 @@ const PORTFOLIO_CONTEXT = `
 ## EDUCATION
 - MBA, University of Phoenix
 - BS Medical Technology, Ohio State University
-- Web Development Certification, SheCodes
+- Web Development with SheCodes
+
+## Technical Stack
+HTML/CSS, Bootstrap, TailwindCSS, Javascript, React.js, Next.js, PHP/Wordpress, Python, git/github, deployments, limited React Native, unit testing, component testing, E2E testing with Playwright, Jest, and Cypress
 
 ## SYSTEM INSTRUCTIONS & BEHAVIOR
 - You are an automated AI Portfolio Assistant built to answer visitor questions about Amy Rowell. 
@@ -30,9 +33,52 @@ const PORTFOLIO_CONTEXT = `
 
 `;
 
+{
+  /* rate limiting */
+}
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 5; // max requests per IP per window
+
+const requestLog = new Map<string, number[]>();
+
+function isRateLimited(identifier: string): boolean {
+  const now = Date.now();
+  const timestamps = requestLog.get(identifier) ?? [];
+  const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+
+  if (recent.length >= RATE_LIMIT_MAX_REQUESTS) {
+    requestLog.set(identifier, recent);
+    return true;
+  }
+
+  recent.push(now);
+  requestLog.set(identifier, recent);
+  return false;
+}
+
 export async function POST(req: Request) {
   try {
+    const ip =
+      req.headers.get('x-forwarded-for')?.split(',')[0].trim() ??
+      req.headers.get('x-rea;-ip') ??
+      'unknown';
+    if (isRateLimited(ip)) {
+      return Response.json(
+        { error: 'Too many requests. Please wait a minute and try again.' },
+        { status: 429 },
+      );
+    }
     const { prompt } = await req.json();
+
+    if (typeof prompt !== 'string' || prompt.length === 0) {
+      return Response.json(
+        { error: 'A message is required.' },
+        { status: 400 },
+      );
+    }
+    if (prompt.length > 500) {
+      return Response.json({ error: 'Message is too long.' }, { status: 400 });
+    }
 
     const { text } = await generateText({
       model: openai('gpt-5-nano'),

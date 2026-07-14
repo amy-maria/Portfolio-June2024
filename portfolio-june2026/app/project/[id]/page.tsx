@@ -21,11 +21,11 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     );
   }
   return (
-    <main className='max-w-4xl mx-auto p-8 min-h-screen bg-white'>
+    <main className='max-w-4xl mx-auto p-8 min-h-screen bg-slate-300'>
       {/* Back Button */}
       <Link
         href='/'
-        className='inline-block text-blue-600 hover:underline mb-6 font-medium'>
+        className='inline-block text-blue-800 hover:underline mb-6 font-medium'>
         ← Back to Projects
       </Link>
 
@@ -41,16 +41,20 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         />
       </div>
       {/*project content text details */}
-      <h1 className='text-4xl font-black text-gray-900'>{project.title}</h1>
+      <h1 className='text-2xl font-black text-black'>{project.title}</h1>
       {/* Expanded Hero Showcase Container */}
 
       {/* Detail Copy Block */}
-      <div className='text-4xl font-black text-gray-900 mb-4'>
-        <p className='text-gray-600 leading-relaxed'>
+      <div className='text-lg font-black mb-4'>
+        <p className='text-black leading-relaxed'>
           {project.extendedDescription}
         </p>
-        <p>Key Features: {project.keyFeatures}</p>
-        <LinkButton url={project.link} />
+        <p className='text-black  text-lg mt-2 leading-relaxed'>
+          Key Features: {project.keyFeatures}
+        </p>
+        <span className=' flex items-center justify-center'>
+          <LinkButton url={project.url} />
+        </span>
       </div>
     </main>
   );

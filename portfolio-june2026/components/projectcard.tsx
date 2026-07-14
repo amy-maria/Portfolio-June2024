@@ -4,9 +4,9 @@ import { projectsData } from './data';
 
 export default function ProjectCard() {
   return (
-    <div className='container mx-auto p-6'>
+    <div data-testid='project-card' className='container mx-auto p-6'>
       {/* Responsive CSS Grid wrapper */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch'>
         {projectsData.map((project) => (
           <Link
             key={project.id}
