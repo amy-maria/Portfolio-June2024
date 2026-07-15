@@ -6,11 +6,11 @@ function handleClick() {
 
 export default function CTA() {
     return (
-      <div className='mt-14 align-items-center rounded-lg bg-black-200 px-8 py-2 font-medium text-white'>
-        <h3 className='text-center text-2xl text-blue-600 mb-4'>
+      <div className='mt-14align-items-center rounded-lg bg-black-200 px-8 py-2 font-medium text-white'>
+        <h3 className='text-center text-2xl text-blue-600 mt-8 mb-4'>
           We should build something together!
         </h3>
-        <p>
+        <p className='px-8 max-w-7xl mx-auto text-lg'>
           I am looking for a front-end, full-stack, or QA role where I can grow
           with a team. Do you have a project or an opening in mind? I would love
           to talk.

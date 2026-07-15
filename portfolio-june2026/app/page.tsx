@@ -36,7 +36,7 @@ export default async function Home({
           <CertificateCard />
         </section>
         <section id='about' className='scroll-mt-28'>
-          <h3 className='text-center text-2xl text-blue-600'>About Me</h3>
+          <h3 className='text-center text-2xl text-blue-600 mb-4'>About Me</h3>
           <About />
         </section>
         <CTA />
