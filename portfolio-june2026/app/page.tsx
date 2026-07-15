@@ -17,7 +17,7 @@ export default async function Home({
   }
 
   return (
-    <main className='min-h-screen bg-[0e0d0b] px-8 py-12'>
+    <main className='min-h-screen bg-[#0e0d0b] px-8 py-12'>
       <Suspense
         fallback={
           <div className='text-center text-white py-20'>
