@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className='px-8 max-w-7xl mx-auto'>
       <div className='mb-12'>
-        <p className='text-white text-sm leading-relaxed'>
+        <p className='text-white text-lg leading-relaxed'>
           Before writing code, I spent several years in the Clinical Laboratory.
           I enjoyed learning and working in various clinical information systems
           (LIS/HIS) roles. That experience taught me how frustrating bad

@@ -25,18 +25,17 @@ export default async function Home({
           </div>
         }>
         <Hero />
-        <section id='projects' className='scroll-mt-24'>
+        <section id='projects' className='scroll-mt-30'>
           <h1 className='text-2xl text-center text-white'>
             Completed Projects
           </h1>
           <ProjectCard />
         </section>
-        <section id='education' className='scroll-mt-24'>
-          <hr />
+        <section id='education' className='scroll-mt-28'>
           <h2 className='mt-4 text-2xl text-center text-white'>Education</h2>
           <CertificateCard />
         </section>
-        <section id='about' className='scroll-mt-30'>
+        <section id='about' className='scroll-mt-28'>
           <h3 className='text-center text-2xl text-blue-600'>About Me</h3>
           <About />
         </section>

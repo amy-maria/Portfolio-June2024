@@ -1,7 +1,7 @@
 export default function Hero() {
 
   return (
-    <div className='text-lg text-center text-[e2e8f0] mb-8'>
+    <div className='px-8 max-w-7xl mx-auto text-lg  text-[e2e8f0] mb-8'>
       <p className='px-8'>
         I build accessible and responsive web applications with React, Next.js,
         and Python — end to end, from Figma to deployment. My background in
