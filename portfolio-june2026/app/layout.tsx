@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navigation from '@/components/nav';
 import Footer from '@/components/footer';
 import Chat from '@/components/chat';
+import { GoogleAnalytics } from '@next/third-parties';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -47,6 +48,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </body>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
       </html>
     </ViewTransitions>
   );
