@@ -6,7 +6,8 @@ import Link from 'next/link';
 import Navigation from '@/components/nav';
 import Footer from '@/components/footer';
 import Chat from '@/components/chat';
-import { GoogleAnalytics } from '@next/third-parties';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -49,6 +50,7 @@ export default function RootLayout({
           </div>
         </body>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
+        <Analytics />
       </html>
     </ViewTransitions>
   );
