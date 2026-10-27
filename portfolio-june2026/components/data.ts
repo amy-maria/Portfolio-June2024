@@ -26,8 +26,26 @@ export const projectsData: ProjectProps[] = [
     altText: 'screen shot of trip planner app using Python and AI',
     url: 'https://weathertravelai-1.streamlit.app/',
   },
+  
   {
     id: 2,
+    title: '*** NEW *** HealthHub',
+    description:
+      'HealthHub is a high-performance .NET-based engine designed to automate the ingestion, validation, and transformation of clinical data.',
+    extendedDescription: 
+    'I developed HealthHub as an end-to-end interoperability engine designed to bridge the gap between legacy medical systems and modern healthcare standards. The system ingests HL7 v2 messages via the MLLP protocol, validates them using a custom context-aware engine, and transforms them into FHIR-compliant JSON resources. This project demonstrates my ability to handle complex medical data standards and build high-performance, reliable software for critical healthcare environments.',
+    keyFeatures:
+      `Real-time Ingestion: A high-performance MLLP listener that handles concurrent TCP connections.
+       Clinical Validation: A modular rule engine that performs strict validation for standard data, while allowing for Emergency Mode to ensure patient care is never delayed by missing information. 
+       Data Transformation: An automated pipeline that converts raw HL7 v2 segments into standardized, searchable FHIR JSON resources.
+       Reliable Persistence: A data layer that stores both the raw "legal" record and extracted metadata.`,
+    stack: 'C++, SQL, Docker ',
+    image: '/images/HealthHub.png',
+    altText: 'screenshot of HealthHub app',
+    url: 'https://github.com/amy-maria/Hl7project/tree/main',
+  },
+  {
+    id: 3,
     title: 'Data Extraction',
     description:
       'An interactive data visualization tool that extracts world internet usage data from a CSV dataset and dynamically generates an illustrative time-series line plot for specific regions upon user request.',
@@ -42,7 +60,7 @@ export const projectsData: ProjectProps[] = [
     url: 'https://pyonlinepopulation.vercel.app',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Promptopia',
     description:
       'An open-source, full-stack AI prompting platform where users can securely authenticate via OAuth to discover, create, edit, and share creative AI prompts.',
@@ -56,7 +74,7 @@ export const projectsData: ProjectProps[] = [
     url: 'https://share-prompts-cyan.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Python Weather app',
     description:
       'A full-stack Python application providing real-time weather forecasting alongside a community discussion board, featuring secure user authentication and dynamic API data fetching.',
@@ -70,7 +88,7 @@ export const projectsData: ProjectProps[] = [
     url: 'https://pyweatherapp-wine.vercel.app',
   },
   {
-    id: 5,
+    id: 6,
     title: 'React Weather App',
     description:
       'A sleek, highly responsive frontend application that delivers real-time weather analytics, featuring a dynamic measurement conversion toggle and contextual asset rendering based on atmospheric conditions.',
@@ -84,8 +102,22 @@ export const projectsData: ProjectProps[] = [
     url: 'https://helpful-figolla-5fbcfd.netlify.app/',
   },
 
+  
+];
+const inactiveProjects: ProjectProps[] = [
   {
-    id: 6,
+    id: 7,
+    title: 'Figma',
+    description: 'Figma',
+    extendedDescription: 'Email',
+    keyFeatures: 'Email',
+    stack: 'React, HTML5, CSS3',
+    image: '/images/Movieland3.png',
+    altText: 'screenshot of Email',
+    url: 'https://fabulous-fox-de5f06.netlify.app/',
+  },
+  {
+    id: 8,
     title: 'MovieLand',
     description:
       'A responsive, cinematic single-page application built with React that allows users to seamlessly search an external entertainment database and discover movies in real time.',
@@ -98,10 +130,8 @@ export const projectsData: ProjectProps[] = [
     altText: 'screenshot of Netflix style movie search',
     url: 'https://magnificent-puppy-d069a8.netlify.app/',
   },
-];
-const inactiveProjects: ProjectProps[] = [
   {
-    id: 7,
+    id: 9,
     title: 'Rockets',
     description: 'Rockets',
     extendedDescription: 'Rockets',
@@ -112,7 +142,7 @@ const inactiveProjects: ProjectProps[] = [
     url: 'https://harmonious-gecko-56b001.netlify.app/',
   },
   {
-    id: 8,
+    id: 10,
     title: 'Email',
     description: 'Email',
     extendedDescription: 'Email',
@@ -122,15 +152,6 @@ const inactiveProjects: ProjectProps[] = [
     altText: 'screenshot of Email',
     url: 'https://resilient-rabanadas-faf91a.netlify.app/',
   },
-  {
-    id: 9,
-    title: 'Figma',
-    description: 'Figma',
-    extendedDescription: 'Email',
-    keyFeatures: 'Email',
-    stack: 'React, HTML5, CSS3',
-    image: '/images/Movieland3.png',
-    altText: 'screenshot of Email',
-    url: 'https://fabulous-fox-de5f06.netlify.app/',
-  },
+
+  
 ];
