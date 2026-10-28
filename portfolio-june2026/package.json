@@ -16,15 +16,15 @@
   "dependencies": {
     "@ai-sdk/openai": "^2.0.110",
     "@ai-sdk/react": "^2.0.212",
-    "@next/third-parties": "^16.2.10",
+    "@next/third-parties": "^16.4.3",
     "@vercel/analytics": "^2.0.1",
     "ai": "^5.0.210",
     "dotenv": "^17.4.2",
     "lucide-react": "^1.23.0",
-    "next": "^16.2.10",
+    "next": "^16.4.3",
     "next-view-transitions": "^0.3.5",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-icons": "^5.6.0",
     "tsx": "^4.23.0"
   },
@@ -36,7 +36,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.9",
+    "eslint-config-next": "^16.4.3",
     "tailwindcss": "^4",
     "typescript": "^5.9.3"
   }

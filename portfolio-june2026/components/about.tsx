@@ -17,7 +17,7 @@ export default function About() {
         </p>
       </div>
 
-      <h2 className='font-mono text-[12px] text-muted-foreground tracking-widest uppercase mb-5'>
+      <h2 className='font-mono text-[12px] text-slate-400tracking-widest uppercase mb-5'>
         Technical Stack
       </h2>
       <div className='flex flex-wrap gap-3'>

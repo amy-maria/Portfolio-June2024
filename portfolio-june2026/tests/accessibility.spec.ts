@@ -8,6 +8,13 @@ test.describe('Accessibility scan', () => {
         const results = await new AxeBuilder({ page }).analyze();
         expect(results.violations).toEqual([]);
     });
+    test('nav links are reachable by tab', async ({ page, browserName }) => {
+      test.skip(
+        browserName === 'webkit',
+        'Safari excludes links from tab order by default (real behavior, not a bug)',
+      );
+      await page.goto('/');
+    });
     test('project detail page has no accessibility violations', async ({ page }) => {
         await page.goto('/project/1');
         const results = await new AxeBuilder({ page }).analyze();
