@@ -4,7 +4,7 @@ import { contactInformation } from './contactinformation';
 
 export default function Footer() {
   return (
-    <footer id='footer'>
+    <footer id='footer' className='bg-[#0e0d0b]'>
       <div className='w-full max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6'>
         <div className='flex flex-wrap items-center gap-3'>
           {contactInformation.map(({ title, href, iconName }) => (

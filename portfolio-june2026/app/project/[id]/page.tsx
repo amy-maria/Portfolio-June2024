@@ -21,40 +21,42 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     );
   }
   return (
-    <main className='max-w-4xl mx-auto p-8 min-h-screen bg-slate-300'>
-      {/* Back Button */}
-      <Link
-        href='/'
-        className='inline-block text-blue-800 hover:underline mb-6 font-medium'>
-        ← Back to Projects
-      </Link>
+    <main className='min-h-screen bg-[#0e0d0b] py-8'>
+      <div className='max-w-4xl mx-auto p-8 min-h-screen bg-slate-300'>
+        {/* Back Button */}
+        <Link
+          href='/'
+          className='inline-block text-blue-800 hover:underline mb-6 font-medium'>
+          ← Back to Projects
+        </Link>
 
-      {/* Hero Container */}
-      <div className='relative h-96 w-full rounded-2xl overflow-hidden mb-6'>
-        <Image
-          src={project.image}
-          alt={project.altText}
-          fill
-          priority
-          className='object-cover'
-          style={{ viewTransitionName: `project-${id}` }}
-        />
-      </div>
-      {/*project content text details */}
-      <h1 className='text-2xl font-black text-black'>{project.title}</h1>
-      {/* Expanded Hero Showcase Container */}
+        {/* Hero Container */}
+        <div className='relative h-96 w-full rounded-2xl overflow-hidden mb-6'>
+          <Image
+            src={project.image}
+            alt={project.altText}
+            fill
+            priority
+            className='object-cover'
+            style={{ viewTransitionName: `project-${id}` }}
+          />
+        </div>
+        {/*project content text details */}
+        <h1 className='text-2xl font-black text-black'>{project.title}</h1>
+        {/* Expanded Hero Showcase Container */}
 
-      {/* Detail Copy Block */}
-      <div className='text-lg font-black mb-4'>
-        <p className='text-black leading-relaxed'>
-          {project.extendedDescription}
-        </p>
-        <p className='text-black  text-lg mt-2 leading-relaxed'>
-          Key Features: {project.keyFeatures}
-        </p>
-        <span className=' flex items-center justify-center'>
-          <LinkButton url={project.url} />
-        </span>
+        {/* Detail Copy Block */}
+        <div className='text-lg font-black mb-4'>
+          <p className='text-black leading-relaxed'>
+            {project.extendedDescription}
+          </p>
+          <p className='text-black  text-lg mt-2 leading-relaxed'>
+            Key Features: {project.keyFeatures}
+          </p>
+          <span className=' flex items-center justify-center'>
+            <LinkButton url={project.url} />
+          </span>
+        </div>
       </div>
     </main>
   );

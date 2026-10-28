@@ -34,14 +34,16 @@ export default function RootLayout({
       <html
         lang='en'
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-        <body className='min-h-full flex flex-col'>
-          <header className='sticky top-0 z-50 bg-black/80 backdrop-blur-md w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-gray-900'>
-            <Link
-              href='/'
-              className='text-white font-black text-xl tracking-tighter'>
-              Amy Rowell
-            </Link>
-            <Navigation />
+        <body className='min-h-full flex flex-col  bg-[#0e0d0b]'>
+          <header className='sticky top-0 z-50 bg-[#0e0d0b]/95 backdrop-blur-md w-full border-b border-gray-900'>
+            <div className='max-w-7xl mx-auto px-6 py-6 flex items-center justify-between'>
+              <Link
+                href='/'
+                className='text-white font-black text-xl tracking-tighter'>
+                Amy Rowell
+              </Link>
+              <Navigation />
+            </div>
           </header>
           <div className='flex-grow'>{children}</div>
           <Chat />
