@@ -38,11 +38,25 @@ HTML/CSS, Bootstrap, TailwindCSS, Javascript, React.js, Next.js, PHP/Wordpress, 
 }
 const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
 const RATE_LIMIT_MAX_REQUESTS = 5; // max requests per IP per window
-
+const ALLOWED_ORIGINS = [
+  'https://amyrowell.dev',
+  'https://www.amyrowell.dev',
+  'http://localhost:3000',
+];
 const requestLog = new Map<string, number[]>();
+
+function sweepOldEntries(now: number) {
+  for (const [ip, timestamps] of requestLog) {
+    const newest = timestamps[timestamps.length - 1] ?? 0;
+    if (now - newest >= RATE_LIMIT_WINDOW_MS) {
+      requestLog.delete(ip);
+    }
+  }
+}
 
 function isRateLimited(identifier: string): boolean {
   const now = Date.now();
+  if (requestLog.size > 1000) sweepOldEntries(now);
   const timestamps = requestLog.get(identifier) ?? [];
   const recent = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
 
@@ -51,6 +65,7 @@ function isRateLimited(identifier: string): boolean {
     return true;
   }
 
+
   recent.push(now);
   requestLog.set(identifier, recent);
   return false;
@@ -58,9 +73,14 @@ function isRateLimited(identifier: string): boolean {
 
 export async function POST(req: Request) {
   try {
+    //  reject requests from other websites before doing anything else
+    const origin = req.headers.get('origin');
+    if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+      return Response.json({ error: 'Forbidden' }, { status: 403 });
+    }
     const ip =
       req.headers.get('x-forwarded-for')?.split(',')[0].trim() ??
-      req.headers.get('x-rea;-ip') ??
+      req.headers.get('x-real-ip') ??
       'unknown';
     if (isRateLimited(ip)) {
       return Response.json(
@@ -68,6 +88,7 @@ export async function POST(req: Request) {
         { status: 429 },
       );
     }
+
     const { prompt } = await req.json();
 
     if (typeof prompt !== 'string' || prompt.length === 0) {
