@@ -97,7 +97,7 @@ export default function Chat() {
       {isOpen && (
         <div
           role='complementary'
-          aria-label='Portfolio assisant chat'
+          aria-label='Portfolio assistant chat'
           className='flex flex-col w-90 sm:w-100 h-125 bg-slate-500 rounded-2xl shadow-2xl overflow-hidden'>
           {/* header */}
           <div className='flex items-center justify-between p-4 bg-slate-600 text-white'>
