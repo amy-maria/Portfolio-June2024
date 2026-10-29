@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Project detail page shows extended description and View Full Project button', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/project/1');
+        await page.goto('/project/2');
     });
 
     test('shows the project title and description', async ({ page }) => {

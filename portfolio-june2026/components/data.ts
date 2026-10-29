@@ -16,15 +16,16 @@ export const projectsData: ProjectProps[] = [
     id: 1,
     title: 'Good News',
     description:
-      'A news app with custom filter that allows the user to customize their news feed by keywords.',
+      'A personalized news reader that lets signed-in users filter out the filler — gossip and social-media reaction pieces — using their own list of excluded keywords.',
     extendedDescription:
-      'This project started out as a reaction to an everyday irritation; filler content in news apps. I developed an exclusion filter for the news app that would allow the user to filter articles based on keywords to suppress.',
+      'Good News started from an everyday irritation: news feeds packed with clickbait, shopping links, and stories built from social media reactions. I built a news app that lets each user decide what they never want to see. Users create an account, save a personal list of excluded words and phrases, and the app filters live headlines from NewsAPI against that list before displaying them. I built it without following a tutorial to get hands-on practice with Next.js, a real database, authentication, and testing. Security and quality were part of the design: passwords are hashed, failed logins are rate-limited with an account lockout, and the news API key is kept on the server. The app is covered by three layers of automated tests — unit tests, end-to-end user flows, and accessibility audits — that run in CI on every push.',
     keyFeatures:
-      'Keywords are edited, saved and deleted by the authorized user.',
-    stack: 'Next.js, Tailwind, Neon Postgresg',
+      'Per-user keyword and phrase filtering stored in Postgres, secure sign-up and login with hashed passwords and failed-login lockout, server-side NewsAPI integration with a local-data fallback, keyboard-accessible article cards, and unit, end-to-end, and axe-core accessibility tests running in GitHub Actions.',
+    stack:
+      'Next.js, TypeScript, NextAuth, Neon Postgres, Tailwind CSS, Vitest, Playwright',
     image: '/images/goodnews.png',
     altText: 'screen shot of Good News site',
-    url: 'https://goodnews-j6k7xd3rt-amys-projects-a92c4254.vercel.app/',
+    url: 'https://goodnews-amys-projects-a92c4254.vercel.app/',
   },
   {
     id: 2,

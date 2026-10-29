@@ -37,6 +37,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             alt={project.altText}
             fill
             priority
+            sizes='(max-width: 896px) 100vw, 832px'
             className='object-cover'
             style={{ viewTransitionName: `project-${id}` }}
           />
