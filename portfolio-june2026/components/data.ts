@@ -96,7 +96,7 @@ export const projectsData: ProjectProps[] = [
       'This project combines external API integration with multi-page web development. On the main dashboard, users can search for any city to instantly retrieve current meteorological data and a detailed 5-day forecast. Beyond live weather tracking, the application features a dedicated community space. By registering and logging into an account, users can interact on a separate message board to post updates and share localized updates, effectively demonstrating backend user management, state preservation, and third-party API data consumption.',
     keyFeatures:
       'Real-time API weather data fetching, 5-day visual forecast parsing, and user authentication with an interactive community post feed.',
-    stack: 'Python, Flask, CSS, HTML',
+    stack: 'Python, Django, CSS, HTML',
     image: '/images/pythonweather.png',
     altText: 'screenshot of weather app with user posts',
     url: 'https://pyweatherapp-wine.vercel.app',
