@@ -20,6 +20,6 @@ export const TechnicalStack: TechnicalProps[] = [
   { id: 8, skill: 'GraphQL' },
   { id: 9, skill: 'Vercel' },
   { id: 10, skill: 'PostgreSQL' },
-  { id: 11, skill: 'C++' },
+  { id: 11, skill: 'C#/.NET' },
   { id: 12, skill: 'HL7/FHIR' },
 ];

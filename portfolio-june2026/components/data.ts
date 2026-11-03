@@ -36,7 +36,7 @@ export const projectsData: ProjectProps[] = [
       "Planning a trip shouldn't feel like a second job. This full-stack application takes the friction out of travel by leveraging AI to build custom itineraries in seconds. Users simply input their starting point, destination, and trip duration. The backend processes the request to dynamically calculate optimal routes, select highly-rated activities, recommend local dining, and forecast expected expenses.",
     keyFeatures:
       'Automated multi- day routing, localized dining and activity curation, and real - time expense estimation.',
-    stack: 'Python, React, Tailwind CSS',
+    stack: 'Python + Streamlit, GeminiAPI',
     image: '/images/aitripplanner.png',
     altText: 'screen shot of trip planner app using Python and AI',
     url: 'https://weathertravelai-1.streamlit.app/',
@@ -44,7 +44,7 @@ export const projectsData: ProjectProps[] = [
 
   {
     id: 3,
-    title: '*** NEW *** HealthHub',
+    title: 'HealthHub',
     description:
       'HealthHub is a high-performance .NET-based engine designed to automate the ingestion, validation, and transformation of clinical data.',
     extendedDescription:
@@ -53,7 +53,7 @@ export const projectsData: ProjectProps[] = [
        Clinical Validation: A modular rule engine that performs strict validation for standard data, while allowing for Emergency Mode to ensure patient care is never delayed by missing information. 
        Data Transformation: An automated pipeline that converts raw HL7 v2 segments into standardized, searchable FHIR JSON resources.
        Reliable Persistence: A data layer that stores both the raw "legal" record and extracted metadata.`,
-    stack: 'C++, SQL, Docker ',
+    stack: 'C#, SQL, Docker ',
     image: '/images/HealthHub.png',
     altText: 'screenshot of HealthHub app',
     url: 'https://github.com/amy-maria/Hl7project/tree/main',
