@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         <div className='flex flex-row-reverse items-center gap-2 font-mono text-s text-white'>
-          <span>Amy Rowell {new Date().getFullYear()}</span>
+          <span>{new Date().getFullYear()} Amy Rowell</span>
           <FaCopyright />
         </div>
       </div>

@@ -4,22 +4,17 @@ import { TechnicalStack } from './technicalstack';
 export default function About() {
   return (
     <div className='px-8 max-w-7xl mx-auto'>
-      <div className='mb-12'>
-        <p className='text-white text-lg leading-relaxed'>
-          Before writing code, I spent several years in the Clinical Laboratory.
-          I enjoyed learning and working in various clinical information systems
-          (LIS/HIS) roles. That experience taught me how frustrating bad
-          software can be for the people actually using it. It is a big part of
-          why I moved into development. Today, I focus on front-end and
-          full-stack work: React, Next.js, and Python with a growing interest in
-          QA. I care about writing code that is clean, accessible, responsive
-          and genuinely useful.
+      <div className='mb-12 text-white text-lg leading-relaxed'>
+        <p>
+          Before writing code, I spent 25 years in clinical laboratories as a Medical Technologist, Transfusion Medicine Supervisor, and Laboratory Manager. Working with LIS/HIS platforms, middleware, and instrument interfaces showed me how critical software is to patient care. It is a big part of why I moved into software development. </p>
+          <p className='mt-4'>Today, I build and test applications with React, Next.js, TypeScript, Python and C#. I also write automated tests for my projects before shipping. My recent project, HealthHub, builds on my laboratory experience with interfaces: it receives HL7 messages, validates them, and converts them into FHIR resources. </p>
+         <p className='mt-4'> I am looking for roles where clinical knowledge and code meet: Healthcare IT, Full-Stack Development or Software QA.
         </p>
       </div>
 
-      <h2 className='font-mono text-[12px] text-slate-400tracking-widest uppercase mb-5'>
+      <h3 className='font-mono text-[12px] text-slate-400 tracking-widest uppercase mb-5'>
         Technical Stack
-      </h2>
+      </h3>
       <div className='flex flex-wrap gap-3'>
         {TechnicalStack.map(({ id, skill }) => (
           <div

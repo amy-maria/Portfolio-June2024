@@ -14,36 +14,6 @@ export interface ProjectProps {
 export const projectsData: ProjectProps[] = [
   {
     id: 1,
-    title: 'Good News',
-    description:
-      'A personalized news reader that lets signed-in users filter out the filler — gossip and social-media reaction pieces — using their own list of excluded keywords.',
-    extendedDescription:
-      'Good News started from an everyday irritation: news feeds packed with clickbait, shopping links, and stories built from social media reactions. I built a news app that lets each user decide what they never want to see. Users create an account, save a personal list of excluded words and phrases, and the app filters live headlines from NewsAPI against that list before displaying them. I built it without following a tutorial to get hands-on practice with Next.js, a real database, authentication, and testing. Security and quality were part of the design: passwords are hashed, failed logins are rate-limited with an account lockout, and the news API key is kept on the server. The app is covered by three layers of automated tests — unit tests, end-to-end user flows, and accessibility audits — that run in CI on every push.',
-    keyFeatures:
-      'Per-user keyword and phrase filtering stored in Postgres, secure sign-up and login with hashed passwords and failed-login lockout, server-side NewsAPI integration with a local-data fallback, keyboard-accessible article cards, and unit, end-to-end, and axe-core accessibility tests running in GitHub Actions.',
-    stack:
-      'Next.js, TypeScript, NextAuth, Neon Postgres, Tailwind CSS, Vitest, Playwright',
-    image: '/images/goodnews.png',
-    altText: 'screen shot of Good News site',
-    url: 'https://goodnews-amys-projects-a92c4254.vercel.app/',
-  },
-  {
-    id: 2,
-    title: 'Trip Planner',
-    description:
-      'An AI-powered travel assistant that generates complete, day-by-day itineraries—including expected weather, routes, activities, dining options, and budget estimates—based on user-defined destinations and trip lengths.',
-    extendedDescription:
-      "Planning a trip shouldn't feel like a second job. This full-stack application takes the friction out of travel by leveraging AI to build custom itineraries in seconds. Users simply input their starting point, destination, and trip duration. The backend processes the request to dynamically calculate optimal routes, select highly-rated activities, recommend local dining, and forecast expected expenses.",
-    keyFeatures:
-      'Automated multi- day routing, localized dining and activity curation, and real - time expense estimation.',
-    stack: 'Python + Streamlit, GeminiAPI',
-    image: '/images/aitripplanner.png',
-    altText: 'screen shot of trip planner app using Python and AI',
-    url: 'https://weathertravelai-1.streamlit.app/',
-  },
-
-  {
-    id: 3,
     title: 'HealthHub',
     description:
       'HealthHub is a high-performance .NET-based engine designed to automate the ingestion, validation, and transformation of clinical data.',
@@ -59,22 +29,36 @@ export const projectsData: ProjectProps[] = [
     url: 'https://github.com/amy-maria/Hl7project/tree/main',
   },
   {
-    id: 4,
-    title: 'Data Extraction',
+    id: 2,
+    title: 'Good News',
     description:
-      'An interactive data visualization tool that extracts world internet usage data from a CSV dataset and dynamically generates an illustrative time-series line plot for specific regions upon user request.',
+      'A personalized news reader that lets signed-in users filter out the filler — gossip and social-media reaction pieces — using their own list of excluded keywords.',
     extendedDescription:
-      'This project is a practical application of data processing and visualization for the web. It uses a Python backend to handle data from a provided CSV file and serves a clean Single Page Application (SPA) interface. The application processes the time-series data and utilizes the Matplotlib library to create clear, visually compelling charts. By clicking the "Generate Plot" button, users receive a tailored visual representation of the growth in online populations by continent, showcasing the integration of powerful data analysis tools into a user-friendly web experience.',
+      'Good News started from an everyday irritation: news feeds packed with clickbait, shopping links, and stories built from social media reactions. I built a news app that lets each user decide what they never want to see. Users create an account, save a personal list of excluded words and phrases, and the app filters live headlines from NewsAPI against that list before displaying them. I built it without following a tutorial to get hands-on practice with Next.js, a real database, authentication, and testing. Security and quality were part of the design: passwords are hashed, failed logins are rate-limited with an account lockout, and the news API key is kept on the server. The app is covered by three layers of automated tests — unit tests, end-to-end user flows, and accessibility audits — that run in CI on every push.',
     keyFeatures:
-      'Server - side CSV data processing, dynamic chart generation, clean and minimalist Single Page Application interface.',
-    stack: 'Python, Flask, Matplotlib',
-    image: '/images/globalonlinepopulation.png',
-    altText:
-      'screenshot of data extraction of global online population using Python',
-    url: 'https://pyonlinepopulation.vercel.app',
+      'Per-user keyword and phrase filtering stored in Postgres, secure sign-up and login with hashed passwords and failed-login lockout, server-side NewsAPI integration with a local-data fallback, keyboard-accessible article cards, and unit, end-to-end, and axe-core accessibility tests running in GitHub Actions.',
+    stack:
+      'Next.js, TypeScript, NextAuth, Neon Postgres, Tailwind CSS, Vitest, Playwright',
+    image: '/images/goodnews.png',
+    altText: 'screen shot of Good News site',
+    url: 'https://goodnews-amys-projects-a92c4254.vercel.app/',
   },
   {
-    id: 5,
+    id: 3,
+    title: 'Trip Planner',
+    description:
+      'An AI-powered travel assistant that generates complete, day-by-day itineraries—including expected weather, routes, activities, dining options, and budget estimates—based on user-defined destinations and trip lengths.',
+    extendedDescription:
+      "Planning a trip shouldn't feel like a second job. This full-stack application takes the friction out of travel by leveraging AI to build custom itineraries in seconds. Users simply input their starting point, destination, and trip duration. The backend processes the request to dynamically calculate optimal routes, select highly-rated activities, recommend local dining, and forecast expected expenses.",
+    keyFeatures:
+      'Automated multi- day routing, localized dining and activity curation, and real - time expense estimation.',
+    stack: 'Python + Streamlit, Gemini API',
+    image: '/images/aitripplanner.png',
+    altText: 'screen shot of trip planner app using Python and AI',
+    url: 'https://weathertravelai-1.streamlit.app/',
+  },
+  {
+    id: 4,
     title: 'Promptopia',
     description:
       'An open-source, full-stack AI prompting platform where users can securely authenticate via OAuth to discover, create, edit, and share creative AI prompts.',
@@ -88,8 +72,8 @@ export const projectsData: ProjectProps[] = [
     url: 'https://share-prompts-cyan.vercel.app/',
   },
   {
-    id: 6,
-    title: 'Python Weather app',
+    id: 5,
+    title: 'Python Weather App',
     description:
       'A full-stack Python application providing real-time weather forecasting alongside a community discussion board, featuring secure user authentication and dynamic API data fetching.',
     extendedDescription:
@@ -102,7 +86,7 @@ export const projectsData: ProjectProps[] = [
     url: 'https://pyweatherapp-wine.vercel.app',
   },
   {
-    id: 7,
+    id: 6,
     title: 'React Weather App',
     description:
       'A sleek, highly responsive frontend application that delivers real-time weather analytics, featuring a dynamic measurement conversion toggle and contextual asset rendering based on atmospheric conditions.',
@@ -117,6 +101,21 @@ export const projectsData: ProjectProps[] = [
   },
 ];
 const inactiveProjects: ProjectProps[] = [
+  {
+    id: 7,
+    title: 'Data Extraction',
+    description:
+      'An interactive data visualization tool that extracts world internet usage data from a CSV dataset and dynamically generates an illustrative time-series line plot for specific regions upon user request.',
+    extendedDescription:
+      'This project is a practical application of data processing and visualization for the web. It uses a Python backend to handle data from a provided CSV file and serves a clean Single Page Application (SPA) interface. The application processes the time-series data and utilizes the Matplotlib library to create clear, visually compelling charts. By clicking the "Generate Plot" button, users receive a tailored visual representation of the growth in online populations by continent, showcasing the integration of powerful data analysis tools into a user-friendly web experience.',
+    keyFeatures:
+      'Server - side CSV data processing, dynamic chart generation, clean and minimalist Single Page Application interface.',
+    stack: 'Python, Flask, Matplotlib',
+    image: '/images/globalonlinepopulation.png',
+    altText:
+      'screenshot of data extraction of global online population using Python',
+    url: 'https://pyonlinepopulation.vercel.app',
+  },
   {
     id: 8,
     title: 'Figma',
@@ -164,4 +163,5 @@ const inactiveProjects: ProjectProps[] = [
     altText: 'screenshot of Email',
     url: 'https://resilient-rabanadas-faf91a.netlify.app/',
   },
+  
 ];

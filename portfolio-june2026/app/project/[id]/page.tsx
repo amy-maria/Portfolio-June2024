@@ -2,16 +2,42 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projectsData } from '@/components/data';
 import LinkButton from '@/components/linkButton';
+import type { Metadata } from 'next';
+import { describe } from 'node:test';
+
 
 interface PageProps {
   params: Promise<{ id: string }>; // App Router asynchronous params structure
 }
 
+function getProject(id: string) {
+  return projectsData.find((item) => String(item.id) === id);
+}
+
+export async function generateMetadata({ params}: PageProps): Promise<Metadata> {
+  const {id} = await params;
+  const project = getProject(id);
+  
+  if (!project) {
+    return { title: 'Project not found' };
+  }
+  
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: `${project.title} | Amy Rowell`,
+      description: project.description,
+      url: `/project/${project.id}`,
+      images: [{ url: project.image, alt: project.altText }],
+    },
+  };
+}
 export default async function ProjectDetailPage({ params }: PageProps) {
   // dynamic id
   const { id } = await params;
   // direct evaluation
-  const project = projectsData.find((item) => String(item.id) === String(id));
+  const project = getProject(id);
   //prevent page rendering crashes if id does not exist
   if (!project) {
     return (

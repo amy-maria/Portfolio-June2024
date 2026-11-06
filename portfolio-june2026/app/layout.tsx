@@ -8,6 +8,12 @@ import Footer from '@/components/footer';
 import Chat from '@/components/chat';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
+import { projectsData } from '@/components/data';
+import { ImInsertTemplate } from 'react-icons/im';
+
+function getProject(id: string) {
+  return projectsData.find((item) => String(item.id) === id);
+}
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,9 +25,26 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const description = 'Amy Rowell builds, tests and maintains software with React, Next.js, Python, C#/.NET, HL7/FHIR, Playwright.'
+
 export const metadata: Metadata = {
-  title: 'Portfolio for Amy Rowell',
-  description: 'Developer portfolio for Amy Rowell',
+  metadataBase: new URL('https://amyrowell.dev'),
+  title: {
+    default: 'Amy Rowell | Healthcare IT, Full-stack Development, Software QA',
+    template: '%s | Amy Rowell',
+  },
+  description,
+  openGraph: {
+    title: 'Amy Rowell | Healthcare IT, Full-stack Development, Software QA',
+    description,
+    url: '/',
+    siteName: 'Amy Rowell',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  }
 };
 
 export default function RootLayout({

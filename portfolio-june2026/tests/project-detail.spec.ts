@@ -9,12 +9,12 @@ test.describe('Project detail page shows extended description and View Full Proj
 
     test('shows the project title and description', async ({ page }) => {
         
-        await expect(page.getByText('Trip Planner')).toBeVisible();
-        await expect(page.getByText(/planning a trip/i)).toBeVisible();
+        await expect(page.getByRole('heading', {name: 'Good News'})).toBeVisible();
+        await expect(page.getByText(/Good News started/i)).toBeVisible();
     });
 
     test('shows project screenshot and contains alt text', async ({ page }) => {
-        const screenshot = page.getByAltText('screen shot of trip planner app using Python and AI');
+        const screenshot = page.getByAltText('screen shot of Good News site');
         await expect(screenshot).toBeVisible();
     
     });
